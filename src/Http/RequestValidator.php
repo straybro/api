@@ -93,6 +93,9 @@ class RequestValidator
             if ($validator instanceof Validator && $validator->validate($request)) {
                 $passed = true;
             }
+            else{
+                $passed = false;
+            }
         }
 
         // The accept validator will always be run once any of the previous validators have
